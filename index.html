@@ -54,7 +54,7 @@
             z-index: -1; 
         }
 
-        /* زر التحكم بالصوت الاحترافي */
+        /* زر التحكم بالصوت */
         .audio-toggle {
             position: fixed; 
             top: 30px; 
@@ -80,13 +80,7 @@
             position: relative;
         }
 
-        .speaker-body {
-            width: 7px; height: 8px; 
-            background: white; 
-            position: relative;
-            z-index: 2;
-        }
-
+        .speaker-body { width: 7px; height: 8px; background: white; position: relative; z-index: 2; }
         .speaker-head {
             width: 0; height: 0; 
             border-top: 8px solid transparent;
@@ -105,7 +99,7 @@
             transition: 0.2s;
         }
 
-        /* الكارد الزجاجي (Glassmorphism) */
+        /* الكارد الزجاجي */
         .glass-card {
             background: var(--glass);
             backdrop-filter: blur(25px); 
@@ -119,7 +113,6 @@
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
         }
 
-        /* تحسين النصوص */
         .title {
             font-size: 3rem; 
             font-weight: 900; 
@@ -142,7 +135,6 @@
             font-weight: bold;
             margin: 20px 0; 
             border: 1px solid rgba(0, 255, 100, 0.2);
-            letter-spacing: 0.5px;
         }
 
         .dot { 
@@ -156,14 +148,9 @@
 
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-        .desc { 
-            font-size: 1.05rem; 
-            color: #e0e0e0; 
-            line-height: 1.6; 
-            margin-bottom: 30px;
-        }
+        .desc { font-size: 1.05rem; color: #e0e0e0; line-height: 1.6; margin-bottom: 30px; }
 
-        /* الزر الرئيسي */
+        /* الزر الرئيسي مع تأثير النبض */
         .btn-main {
             display: block; 
             background: linear-gradient(90deg, var(--dark-red), var(--red));
@@ -175,19 +162,18 @@
             font-size: 1.2rem;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
-            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
         }
 
         .btn-main:active { transform: scale(0.95); }
 
-        .footer { 
-            margin-top: 30px; 
-            font-size: 0.75rem; 
-            color: #777; 
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
+        .footer { margin-top: 30px; font-size: 0.75rem; color: #777; font-weight: bold; }
         .footer span { color: var(--red); }
     </style>
 </head>
@@ -218,8 +204,7 @@
 
         <p class="desc">استمتع بتشغيل سكريبتاتك المفضلة بأعلى استقرار على أندرويد</p>
         
-        <!-- تم تحديث الرابط ليكون APK وبنفس الإصدار المطلوبة -->
-        <a href="https://github.com/mohanad9539229-boop/AIMBOT-DEAD-RAILS/releases/download/v2.720/Delta-2.720.apk" class="btn-main">DOWNLOAD APK</a>
+        <a href="https://github.com/mohanad9539229-boop/Xc/releases/download/v2.720/Delta-2.720.1167.apk" class="btn-main">DOWNLOAD APK</a>
         
         <p class="footer">🗡️ NORTHERN BLADE IS THE <span>GOAT</span></p>
     </div>
